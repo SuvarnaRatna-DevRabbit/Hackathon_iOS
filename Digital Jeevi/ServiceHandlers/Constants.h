@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #include <ifaddrs.h>
 #include <arpa/inet.h>
+#import <UIKit/UIKit.h>
 
 //#define API_URL @"http://staging.notifii.com/api/cmt/"
 

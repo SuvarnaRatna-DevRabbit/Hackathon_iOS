@@ -7,7 +7,7 @@
 //
 
 #import "Constants.h"
-#import "Images.h"
+#import <UIKit/UIKit.h>
 @implementation Constants
 
 
@@ -64,24 +64,6 @@
 }
 
 
-#pragma mark gettData from CoredataWithStringName
-
-+(UIImage *) getImageFromDataBaseWithImageURL:(NSString *)imageURL{
-    UIImage * image;
-    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context =[delegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Images"];
-    request.predicate = [NSPredicate predicateWithFormat:@"imageName == %@",imageURL];
-  NSArray *results = [context executeFetchRequest:request error:nil];
-    
-    if (results.count != 0) {
-        
-        Images * imagesData = [results objectAtIndex:0];
-        
-        image = [UIImage imageWithData:imagesData.imageData];
-    }
-    return image;
-}
 
 +(void) saveImagesInDataBase:(NSDictionary *)dataDict{
     
