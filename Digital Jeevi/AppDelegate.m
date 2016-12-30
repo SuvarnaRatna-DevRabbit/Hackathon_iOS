@@ -7,32 +7,42 @@
 //
 
 #import "AppDelegate.h"
+#import "ActivityViewController.h";
 
 @interface AppDelegate ()
-{
-    CLLocationManager *locationManager;
-    CLGeocoder *geocoder;
-    CLPlacemark *placemark;
-}
+
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [locationManager requestWhenInUseAuthorization];
-   
-    [locationManager startUpdatingLocation];
-    
-    
-    geocoder = [[CLGeocoder alloc] init];
-    
     // Override point for customization after application launch.
+    
+    [[UIView appearance]setExclusiveTouch:YES];
+    [[UIButton appearance]setExclusiveTouch:YES];
+    [[UITextField appearance]setExclusiveTouch:YES];
+    [[UITextView appearance]setExclusiveTouch:YES];
+    [[UITableView appearance]setExclusiveTouch:YES];
+
+    
+    NSDictionary * dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"userDate"];
+    
+    if ([[dict objectForKey:@"response_info"] objectForKey:@"user_id"]!=nil) {
+        ActivityViewController * home =[[ActivityViewController alloc] initWithNibName:@"ActivityViewController" bundle:nil];
+        UINavigationController * navigation = [[UINavigationController alloc] initWithRootViewController:home];
+        [self.window setRootViewController:navigation];
+        navigation.navigationBar.hidden = YES;
+        [self.window makeKeyAndVisible];
+        
+        return YES;
+
+        
+    }
+    
+    
+    [self checkLocationAuthorization];
+    
     return YES;
 }
 
@@ -59,6 +69,99 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options; {
+    return [[SCLFlicManager sharedManager] handleOpenURL:url];
+}
+
+- (void)checkLocationAuthorization
+{
+    
+    if ([CLLocationManager locationServicesEnabled] == NO)
+    {
+        NSLog(@"locationServicesEnabled false");
+        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled" message:@"Please go into Settings and enable Location Services." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        servicesDisabledAlert.tag =111;
+        [servicesDisabledAlert show];
+    } else
+    {
+        CLAuthorizationStatus authorizationStatus= [CLLocationManager authorizationStatus];
+        
+        if(authorizationStatus == kCLAuthorizationStatusDenied || authorizationStatus == kCLAuthorizationStatusRestricted)
+        {
+            NSLog(@"authorizationStatus failed");
+            UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled" message:@"You currently have all location services for DeliveryMark disabled. To continue enable location services." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [servicesDisabledAlert show];
+            [self.locationManager stopUpdatingLocation];
+        } else
+        {
+            NSLog(@"authorizationStatus authorized");
+            self.locationManager = [[CLLocationManager alloc] init];
+            
+            self.locationManager.delegate = self;
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+            
+            if([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+            {
+                [self.locationManager requestAlwaysAuthorization];
+            }
+            [self.locationManager startUpdatingLocation];
+        }
+    }
+}
+
+#pragma mark location manager delegate  methods
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    
+    [[SCLFlicManager sharedManager] onLocationChange];
+    
+    // CLLocation *currentLocation = [locations lastObject];
+    
+    //    NSLog(@"before latitude:%@...longitude:%@",strCurrentLatitude,strCurrentLongitude);
+    //
+    //    strCurrentLatitude = [NSString stringWithFormat:@"%.8f",currentLocation.coordinate.latitude];
+    //
+    //    strCurrentLongitude =  [NSString stringWithFormat:@"%.8f",currentLocation.coordinate.longitude];
+    //
+    //    NSLog(@"after latitude:%@...longitude:%@",strCurrentLatitude,strCurrentLongitude);
+    
+    //    [self.locationManager stopUpdatingLocation];
+}
+
+- (void)locationManager: (CLLocationManager *)manager didFailWithError: (NSError *)error
+{
+    NSLog(@"locationManager error:%@",error);
+    
+    switch([error code])
+    {
+        case kCLErrorNetwork: // general, network-related error
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Please check your network connection." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+            break;
+        case kCLErrorDenied:{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled" message:@"Please go into settings and enable Location Services." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            alert.tag = 111;
+            [alert show];
+        }
+            break;
+        default:
+        {
+            
+        }
+            break;
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status; {
+    if (status == kCLAuthorizationStatusAuthorizedAlways) {
+        [self.locationManager startMonitoringSignificantLocationChanges];
+    }
+}
+
 
 #pragma mark - Core Data stack
 
@@ -139,40 +242,5 @@
         }
     }
 }
-
-
-
-#pragma  mark
-
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-    NSLog(@"didUpdateToLocation: %@", newLocation);
-    CLLocation *currentLocation = newLocation;
-    
-//    if (currentLocation != nil) {
-//        longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-//        latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
-//    }
-    
-    // Reverse Geocoding
-    NSLog(@"Resolving the Address");
-    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
-        NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
-        if (error == nil && [placemarks count] > 0) {
-            placemark = [placemarks lastObject];
-           NSLog(@"address: %@",[NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n%@",
-                                 placemark.subThoroughfare, placemark.thoroughfare,
-                                 placemark.postalCode, placemark.locality,
-                                 placemark.administrativeArea,
-                                 placemark.country]);
-        } else {
-            NSLog(@"%@", error.debugDescription);
-        }
-    } ];
-    
-}
-
-
 
 @end

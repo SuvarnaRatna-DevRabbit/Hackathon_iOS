@@ -15,7 +15,7 @@
 
 //#define API_URL @"http://staging.notifii.com/api/cmt/"
 
- #define API_URL @"http://183.82.106.91:8010/api/cmt/"
+ #define API_URL @"http://www.devrabbit.com/pinkflic/mobile/"
 
 // get sceen size and phonetype
 #define SOME_VALUE (7)
@@ -83,4 +83,10 @@
 +(NSString*)displyTimeForComments:(NSString *)acutalDate;
 +(NSString *)getIPAddress;
 
+
+
+
+//
+
++(void)animateTextField:(UITextField*)textField up:(BOOL)up view:(UIView *)view;
 @end

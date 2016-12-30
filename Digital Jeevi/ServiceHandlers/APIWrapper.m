@@ -50,7 +50,7 @@ static APIWrapper *sharedObject = nil;
         
         UIImageView *bg = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,70,70)];
        // UIImage *pattern = [UIImage imageNamed:@"button_middle_normal.png"];
-        bg.backgroundColor = BUTTON_BAGROUND_COLOR;
+        bg.backgroundColor = [UIColor colorWithRed:76.0/255.0 green:76.0/255.0 blue:76.0/255.0 alpha:1.0];
        // [bg setImage:pattern];
         [activityBgView addSubview:bg];
         
@@ -144,143 +144,6 @@ static APIWrapper *sharedObject = nil;
 
 // - - - - - - - - - - - - - - - - - - Namaste User - - - - - - - - - - - - - - - - - -
 
-//User Login
-- (void)userLogin:(NSDictionary *)parameters success:(void(^)(id responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
-{
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-
-    [self POST:@"recipient_validate.php" parameters:parameters progress:nil
-       success:^(NSURLSessionDataTask *task, id responseObject) {
-
-        success(responseObject);
-      
-    }
-       failure:^(NSURLSessionDataTask *task, NSError *error)
-     {
-         
-         failure(task, error);
-     }];
-    
-}
-
-
-
--(void)recipientMessagesFromCommunityManager:(NSDictionary *)parameters success:(void(^)(id responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure{
-    
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    
-    [self POST:@"recipient_messages_from_community_manager.php" parameters:parameters progress:nil
-       success:^(NSURLSessionDataTask *task, id responseObject) {
-           
-           success(responseObject);
-           
-       }
-       failure:^(NSURLSessionDataTask *task, NSError *error)
-     {
-         NSLog(@"error %@",[error localizedDescription]);
-         
-         failure(task, error);
-     }];
-    
-    
-}
-
-
--(void)messageDetailScreen:(NSDictionary *)parameters success:(void(^)(id responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
-{
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    
-    [self POST:@"post_message_details.php" parameters:parameters progress:nil
-       success:^(NSURLSessionDataTask *task, id responseObject) {
-           
-           
-           success(responseObject);
-           
-       }
-       failure:^(NSURLSessionDataTask *task, NSError *error)
-     {
-         NSLog(@"error %@",[error localizedDescription]);
-         
-         failure(task, error);
-     }];
-
-}
-
--(void)appSettingsToRecipients:(NSDictionary *)parameters success:(void(^)(id responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
-{
-    
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    
-    [self POST:@"cmt_settings_to_recipients.php" parameters:parameters progress:nil
-       success:^(NSURLSessionDataTask *task, id responseObject) {
-                success(responseObject);
-       }
-       failure:^(NSURLSessionDataTask *task, NSError *error)
-     {
-         NSLog(@"error %@",[error localizedDescription]);
-         
-         failure(task, error);
-     }];
-
-        
-}
-
--(void)recipientVerification:(NSDictionary *)parameters success:(void(^)(id responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure{
-    
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    
-    [self POST:@"recipient_verification.php" parameters:parameters progress:nil
-       success:^(NSURLSessionDataTask *task, id responseObject) {
-        success(responseObject);
-           
-       }
-       failure:^(NSURLSessionDataTask *task, NSError *error)
-     {
-         NSLog(@"error %@",[error localizedDescription]);
-         
-         failure(task, error);
-     }];
-
-}
-
--(void)recipientEvents:(NSDictionary *)parameters success:(void(^)(id responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
-{
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-  
-    [self POST:@"recipient_past_upcoming_events.php" parameters:parameters progress:nil
-       success:^(NSURLSessionDataTask *task, id responseObject) {
-           success(responseObject);
-           
-       }
-       failure:^(NSURLSessionDataTask *task, NSError *error)
-     {
-         NSLog(@"error %@",[error localizedDescription]);
-         
-         failure(task, error);
-     }];
-
-    
-}
 
 
 
@@ -295,6 +158,7 @@ static APIWrapper *sharedObject = nil;
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [self.requestSerializer setValue:@"text/html" forHTTPHeaderField:@"Accept"];
     
     [self POST:urlExtention parameters:parameters progress:nil
        success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -303,8 +167,8 @@ static APIWrapper *sharedObject = nil;
        }
        failure:^(NSURLSessionDataTask *task, NSError *error)
      {
-         NSLog(@"error %@",[error localizedDescription]);
-         
+         //NSLog(@"error %@",[error localizedDescription]);
+           [[[UIAlertView alloc] initWithTitle:@"Oops!" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
          failure(task, error);
      }];
     

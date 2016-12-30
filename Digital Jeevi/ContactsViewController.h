@@ -1,16 +1,18 @@
 //
 //  ContactsViewController.h
-//  Digital Jeevi
+//  Pinkflic
 //
-//  Created by DevRabbit on 23/12/16.
-//  Copyright © 2016 DevRabbit. All rights reserved.
+//  Created by Rabbit on 24/12/16.
+//  Copyright © 2016 Rabbit          DevRabbit. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <ContactsUI/ContactsUI.h>
-#import <AddressBook/AddressBook.h>
-#import <AddressBookUI/AddressBookUI.h>
-#import "ContactsTableViewCell.h"
+//#import "NormalActivitiesViewController.h"
+
 @interface ContactsViewController : UIViewController
+
+
+
+@property NSMutableArray * alreadySelectedContacts;
 
 @end

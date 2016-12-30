@@ -152,4 +152,23 @@
 
 }
 
+
+
+
++(void)animateTextField:(UITextField*)textField up:(BOOL)up view:(UIScrollView *)view
+{
+    CGRect rect = [textField convertRect:[textField bounds] toView:view];
+    CGPoint point = rect.origin;
+    point.x = 0;
+    if (up)
+        point.y -= 100;
+    else
+        point.y = 0;
+   [view setContentOffset:point animated:YES];
+    
+}
+
+
+
+
 @end
