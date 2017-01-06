@@ -311,10 +311,10 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[ViewController loginButtonAction:]"
-                  moduleName = "Digital Jeevi"
+                  moduleName = "PinkFlic"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DevRabbit/Desktop/Hackathon_iOS/Digital%20Jeevi/ViewController.m"
-                  timestampString = "504536630.779937"
+                  timestampString = "505224133.944388"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "88"
@@ -326,10 +326,10 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__36-[ViewController loginButtonAction:]_block_invoke_2"
-                  moduleName = "Digital Jeevi"
+                  moduleName = "PinkFlic"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DevRabbit/Desktop/Hackathon_iOS/Digital%20Jeevi/ViewController.m"
-                  timestampString = "504536630.780148"
+                  timestampString = "505224133.944686"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
@@ -407,14 +407,14 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[ActivityViewController locationManager:didUpdateLocations:]"
-                  moduleName = "Digital Jeevi"
+                  moduleName = "PinkFlic"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DevRabbit/Desktop/Hackathon_iOS/Digital%20Jeevi/ActivityViewController.m"
-                  timestampString = "504536630.783996"
+                  timestampString = "505224133.948947"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "471"
-                  endingLineNumber = "471"
+                  startingLineNumber = "459"
+                  endingLineNumber = "459"
                   offsetFromSymbolStart = "1110">
                </Location>
                <Location
@@ -422,97 +422,17 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__61-[ActivityViewController locationManager:didUpdateLocations:]_block_invoke"
-                  moduleName = "Digital Jeevi"
+                  moduleName = "PinkFlic"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DevRabbit/Desktop/Hackathon_iOS/Digital%20Jeevi/ActivityViewController.m"
-                  timestampString = "504536630.784229"
+                  timestampString = "505224133.949132"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "472"
-                  endingLineNumber = "472"
+                  startingLineNumber = "460"
+                  endingLineNumber = "460"
                   offsetFromSymbolStart = "58">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/NormalActivitiesViewController.m"
-            timestampString = "504455649.983101"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-receiveTestNotification:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538130.086053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
-            landmarkName = "-checkBoxButtonClicked:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538130.086053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "357"
-            endingLineNumber = "357"
-            landmarkName = "-checkBoxButtonClicked:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538318.57397"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "408"
-            endingLineNumber = "408"
-            landmarkName = "-doneButtonTapped:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538318.57397"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "410"
-            endingLineNumber = "410"
-            landmarkName = "-doneButtonTapped:"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -535,10 +455,10 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[ProfileViewController btnSaveClicked:]"
-                  moduleName = "Digital Jeevi"
+                  moduleName = "PinkFlic"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DevRabbit/Desktop/Hackathon_iOS/Digital%20Jeevi/ProfileViewController.m"
-                  timestampString = "504536630.790555"
+                  timestampString = "505224133.950339"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "680"
@@ -550,10 +470,10 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__40-[ProfileViewController btnSaveClicked:]_block_invoke.350"
-                  moduleName = "Digital Jeevi"
+                  moduleName = "PinkFlic"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DevRabbit/Desktop/Hackathon_iOS/Digital%20Jeevi/ProfileViewController.m"
-                  timestampString = "504536630.790745"
+                  timestampString = "505224133.95053"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "681"
@@ -602,22 +522,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538318.57397"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "400"
-            endingLineNumber = "400"
-            landmarkName = "-doneButtonTapped:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ContactsViewController.m"
             timestampString = "504534932.395845"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -634,44 +538,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538130.086053"
+            timestampString = "505221768.045364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
             landmarkName = "-filterContentForSearchText:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ActivityViewController.m"
-            timestampString = "504593923.023053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
-            landmarkName = "-flicManagerDidRestoreState:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ActivityViewController.m"
-            timestampString = "504593923.023053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
-            landmarkName = "-alertView:clickedButtonAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -762,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538130.086053"
+            timestampString = "505221768.045364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "335"
-            endingLineNumber = "335"
+            startingLineNumber = "336"
+            endingLineNumber = "336"
             landmarkName = "-filterContentForSearchText:"
             landmarkType = "5">
          </BreakpointContent>
@@ -778,11 +650,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538130.086053"
+            timestampString = "505221768.045364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "333"
-            endingLineNumber = "333"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
             landmarkName = "-filterContentForSearchText:"
             landmarkType = "5">
          </BreakpointContent>
@@ -794,92 +666,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538130.086053"
+            timestampString = "505221768.045364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
             landmarkName = "-filterContentForSearchText:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538130.086053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
-            landmarkName = "-checkBoxButtonClicked:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504534932.395845"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "284"
-            endingLineNumber = "284"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504534932.395845"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504534932.395845"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "278"
-            endingLineNumber = "278"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504534932.395845"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -951,10 +743,10 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NormalActivitiesViewController deleteBtn:]"
-                  moduleName = "Digital Jeevi"
+                  moduleName = "PinkFlic"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DevRabbit/Desktop/Hackathon_iOS/Digital%20Jeevi/NormalActivitiesViewController.m"
-                  timestampString = "504536630.812177"
+                  timestampString = "505224133.964123"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "231"
@@ -966,10 +758,10 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__44-[NormalActivitiesViewController deleteBtn:]_block_invoke"
-                  moduleName = "Digital Jeevi"
+                  moduleName = "PinkFlic"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DevRabbit/Desktop/Hackathon_iOS/Digital%20Jeevi/NormalActivitiesViewController.m"
-                  timestampString = "504536630.812374"
+                  timestampString = "505224133.964325"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "231"
@@ -1002,12 +794,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Digital Jeevi/ContactsViewController.m"
-            timestampString = "504538130.086053"
+            timestampString = "505223348.754308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "353"
-            endingLineNumber = "353"
-            landmarkName = "-checkBoxButtonClicked:"
+            startingLineNumber = "404"
+            endingLineNumber = "404"
+            landmarkName = "-doneButtonTapped:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Digital Jeevi/ContactsViewController.m"
+            timestampString = "505223425.599074"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "-listPeopleInAddressBook:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Digital Jeevi/NormalActivitiesViewController.m"
+            timestampString = "505223589.632225"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "364"
+            endingLineNumber = "364"
+            landmarkName = "-saveBtnAction:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NormalActivitiesViewController saveBtnAction:]"
+                  moduleName = "PinkFlic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/DevRabbit/Desktop/Hackathon_iOS/Digital%20Jeevi/NormalActivitiesViewController.m"
+                  timestampString = "505224133.96811"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "364"
+                  endingLineNumber = "364"
+                  offsetFromSymbolStart = "2492">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__48-[NormalActivitiesViewController saveBtnAction:]_block_invoke"
+                  moduleName = "PinkFlic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/DevRabbit/Desktop/Hackathon_iOS/Digital%20Jeevi/NormalActivitiesViewController.m"
+                  timestampString = "505224133.968304"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "365"
+                  endingLineNumber = "365"
+                  offsetFromSymbolStart = "58">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Digital Jeevi/NormalActivitiesViewController.m"
+            timestampString = "505223888.923669"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "-contactedtiBtnClicked:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Digital Jeevi/NormalActivitiesViewController.m"
+            timestampString = "505223889.715732"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "-contactedtiBtnClicked:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -117,6 +117,7 @@
                  // Contact one each function block is executed whenever you get
                  NSString *phoneNumber = @"";
                  NSString *email = @"";
+                 
                  if( contact.phoneNumbers)
                      phoneNumber = [[[contact.phoneNumbers firstObject] value] stringValue];
                  email = [[contact.emailAddresses firstObject] value] ;
@@ -355,10 +356,7 @@ return cell;
     
    sender.selected = !sender.selected;
     
- 
-        
- 
-  
+   
     if (sender.selected) {
 
                  if ([contactsSelectedArray count] ==10)

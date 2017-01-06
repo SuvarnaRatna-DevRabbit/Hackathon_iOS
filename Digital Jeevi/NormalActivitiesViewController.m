@@ -58,7 +58,7 @@
             
             
             for (NSDictionary * tempDict in [[responseObject objectForKey:@"response_info"] objectForKey:@"contacts"]) {
-                NSDictionary * contacts =[[NSDictionary alloc ]initWithObjectsAndKeys:[tempDict objectForKey:@"phone_string"],@"contact_mobile",[tempDict objectForKey:@"name"],@"contact_name", nil];
+                NSDictionary * contacts =[[NSDictionary alloc ]initWithObjectsAndKeys:[tempDict objectForKey:@"phone_string"],@"contact_mobile",[tempDict objectForKey:@"name"],@"contact_name",[tempDict objectForKey:@"email"],@"contact_email", nil];
                 [arrayNormal addObject:contacts];
                 
                 if ([[[responseObject objectForKey:@"response_info"]objectForKey:@"send_email"] integerValue]==1) {
@@ -343,7 +343,7 @@
             NSDictionary * requst = @{
                                       @"name":([data objectForKey:@"contact_name"])?[data objectForKey:@"contact_name"]:@"",
                                       @"phone_number":([data objectForKey:@"contact_mobile"])?[data objectForKey:@"contact_mobile"]:@"",
-                                      @"email":@""
+                                      @"email":([data objectForKey:@"contact_email"])?[data objectForKey:@"contact_email"]:@""
                                       };
             [dataArray addObject:requst];
             
